@@ -106,7 +106,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/sbin/tad_static:root/sbin/tad_static
 
 PRODUCT_PACKAGES += \
-    charger \
     charger_res_images \
     libnl_2 \
     libtinyxml
@@ -244,6 +243,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     gps.msm8960
 
+# Recovery
+PRODUCT_PACKAGES += \
+    keycheck
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf \
     $(LOCAL_PATH)/gps/sap.conf:system/etc/sap.conf \
@@ -257,8 +260,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     telephony.lteOnCdmaDevice=0 \
     ro.use_data_netmgrd=true \
-    ro.telephony.call_ring.multiple=false \
-    ro.ril.telephony.mqanelements=6
+    ro.telephony.call_ring.multiple=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qualcomm.cabl=0 \
